@@ -1,0 +1,369 @@
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('../font/NexaRegular.otf');
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --section-padding: 100px;
+    --white-color: white;
+    --black-color: black;
+    --tinter: linear-gradient(to bottom, rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+    --text-wrapper-width: 60%;
+    --section-child-spacer-size: 20px;
+    --section-title-size: 44px;
+    --section-subtitle-size: 15px;
+    --section-text-size: 13px;
+    /* --read-more-btn */
+
+}
+
+body{
+    scroll-behavior: smooth;
+    font-family: 'Nexa';
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.intro-section h3{
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.intro-section h1{
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    /* height: 10px; */
+}
+
+
+/*=================== SECTIONS ====================*/
+section{
+    min-height: 100vh !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: var(--section-padding);
+    /* border-bottom: 2px  solid red; */
+}
+
+.intro-section{
+    height: 120vh;
+    background-image: url('../img/Untitled2.png');
+    background-size: cover 100%;
+    background-position: 100% 40%;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.about-section{
+    /* height: 100vh; */
+    background-image:   var(--tinter), url('../img/fix106.png');
+    background-position: 0% 0%;
+    background-size: cover 100%;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.learn-more-section{
+    /* height: 100vh; */
+    background-image: var(--tinter),
+                      url('../img/fitness_PNG35.png'),
+                      url('../img/Untitled4.png');
+    background-size: 100% auto;
+    background-position: 100% 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.promise-section{
+    /* height: 100vh; */
+    background-image: var(--tinter), url('../img/fix1065.png');
+    background-position: 0% center;
+    background-size: auto 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: white;
+}
+
+.improve-section{
+    /* height: 100vh; */
+    background-image: var(--tinter), url('../img/fix10666.png');
+    display: flex;
+    background-position: 100% 100%;
+    background-size: auto 100%;
+    justify-content: start;
+    align-items: center;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================= UNIVERSAL =========================*/
+.text-wrapper{
+    /* border: 1px solid black; */
+    width: var(--text-wrapper-width);
+}
+
+.section-title-text{
+    font-size: var(--section-title-size);
+    margin-bottom: var(--section-child-spacer-size);
+    text-transform: uppercase;
+}
+
+.read-more-btn{
+    outline: none;
+    border: 2px solid white;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.section-subtitle-text{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: right;
+    font-size: var(--section-subtitle-size);
+}
+
+.section-text{
+    margin: var(--section-child-spacer-size) 0px;
+    font-size: var(--section-text-size);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE QUERY */
+@media only screen and (max-width: 480px){
+    /* :root{
+        --section-padding: 16px;
+    } */
+    section{
+        padding: 16px;
+        color: red;
+    }
+    p{
+        font-size: 12px;
+    }
+
+    .intro-section{
+        background-image: var(--tinter), url('../img/Untitled2.png');
+        background-position: 60% 50%;
+        height: 100vh;
+    }
+    .about-section{
+        background-position: 0% 50%;
+    }
+    .learn-more-section{
+        background-position: 50% 100%;
+        background-size: contain;
+    }
+    .promise-section{
+        background-position: 20% 50%;
+        background-size: auto 100%;
+        height: 100vh;
+    }
+    .improve-section{
+        background-position: 100% 100%;
+        background-size: auto 100%;
+    }
+
+
+    .intro-section h1{
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .intro-section h3{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .text-wrapper{
+        width: 100%;
+    }
+
+    .text-wrapper .section-title-text{
+        font-size: 32px;
+    }
+
+    .read-more-btn{
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TABLET QUERY */
+@media only screen  and (min-width: 481px) and (max-width: 768px) {
+    :root{
+        --section-padding: 50px;
+        --section-title-size: 30px;
+        --text-wrapper-width: 100%;
+        
+    }
+
+    .text-wrapper{
+        width: var(--text-wrapper-width);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    height: 400px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .my-logo{
+    margin-bottom: 15px;
+}
+
+footer .protocol-links{
+    color: blue;
+    text-decoration: none;
+    margin: 0px 8px;
+    cursor: pointer;
+}
+
+footer .protocol-links:hover{
+    color: green;
+}
+
+.my-connects{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.my-connects .connect-circle{
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 8px;
+}
+
+.my-connects .connect-circle:hover{
+    background-color: green;
+    color: white;
+}
+
+.my-connects .hire-me-button{
+    padding: 3px 16px;
+    outline: none;
+    margin-left: 24px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    background-color: transparent;
+    border: 2px solid white;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.my-connects .hire-me-button:hover{
+    border-color: green;
+    background-color: green;
+    color: white;
+}
